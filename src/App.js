@@ -13,7 +13,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <ReactIcon title={'Learn React With me'}/>
-        <ReactExample x={2} y={4} title={<h1>Este es un title</h1>}/>
+        <ReactExample />
       </header>
     </div>
   );
