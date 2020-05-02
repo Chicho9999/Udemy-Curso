@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactExampleView from './ReactExampleView';
 
 class ReactExample extends Component{
     state = {bpi:{}}
@@ -12,23 +13,9 @@ class ReactExample extends Component{
             });
         })
     }
-
-    _renderCurrencies (){
-        const { bpi } = this.state;
-        const currencies = Object.keys(bpi);
-    return currencies.map((c, i) => (
-            <div key={i}>
-                <span>1 BitCoin = {bpi[c].rate} {c}</span>
-            </div>
-            )
-        )
-    }
-    
     render() {
     return (
-        <div>
-            {this._renderCurrencies()}
-        </div>
+                <ReactExampleView bpi={this.state.bpi}/>
         )
     }
 } 
